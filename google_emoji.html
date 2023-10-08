@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form with Emojis</title>
+</head>
+<body>
+    <h1>Feedback Form using emoji for google 😊🌟</h1>
+    
+
+        <label for="emoji">Question 1: How satisfied are you with the overall work environment?</label>
+        <select id="emoji" name="emoji">
+            <option value="😃">😃 </option>
+            <option value="😊">😊 </option>
+            <option value="🙁">🙁 </option>
+            <option value="😡">😡 </option>
+           
+        </select><br><br>
+
+        <label for="emoji">Question 2: How would you rate the communication within the team?</label>
+        <select id="emoji" name="emoji">
+            <option value="😃">😃 </option>
+            <option value="😊">😊 </option>
+            <option value="🙁">🙁 </option>
+            <option value="😡">😡 </option>
+        </select><br><br>
+
+        <label for="emoji">Question 3: How is the work pressure?</label>
+        <select id="emoji" name="emoji">
+            <option value="😃">😃 </option>
+            <option value="😊">😊 </option>
+            <option value="🙁">🙁 </option>
+            <option value="😡">😡 </option>
+        </select><br><br>
+
+        <label for="emoji">Question 4: How well do you think your skills are utilized in your role?</label>
+        <select id="emoji" name="emoji">
+            <option value="😃">😃 </option>
+            <option value="😊">😊 </option>
+            <option value="🙁">🙁 </option>
+            <option value="😡">😡 </option>
+        </select><br><br>
+
+        <button type="button" onclick="submitForm()">Submit Form</button>
+    </form>
+
+    <script>
+        function submitForm() {
+            // Perform form submission logic here (validation, data processing, etc.)
+
+            // After successful submission, redirect to another page
+            window.location.href = 'thanks.html';
+        }
+    </script>
+
+</body>
+</html>
