@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Survey</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        fieldset {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        legend {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Simple Survey</h1>
+
+    <form id="surveyForm">
+        <fieldset>
+            <legend>General Information</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+        </fieldset>
+
+        <fieldset>
+            <h1>Select the company</h1>
+
+            <form>
+                <label for="option1">select the company::</label>
+                <select id="option1" name="option1" onchange="displaySelectedOption()">
+                    <option value="microsoft">microsoft</option>
+                    <option value="google">google</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </form>
+        
+            <div id="selectedOptionDisplay"></div>
+        
+            <script>
+                function displaySelectedOption() {
+                    var selectedOption = document.getElementById('option1').value;
+                    document.getElementById('selectedOptionDisplay').innerText = 'you have selected: ' + selectedOption;
+                }
+            </script>
+
+        
+    </form>
+
+
+
+    <h1>Select the way of feedback</h1>
+
+    <form>
+        <label for="option2">Choose the method of feedback:</label>
+        <select id="option2" name="option2" onchange="displaySelectedOption()">
+            <option value="waf">write a feedback</option>
+            <option value="mcqs">mcqs</option>
+            <option value="emoji">emoji</option>
+            <!-- Add more options as needed -->
+        </select>
+    
+
+    <div id="selectedOptionDisplay"></div>
+
+    <script>
+        function displaySelectedOption() {
+            var selectedOption = document.getElementById('option2').value;
+            document.getElementById('selectedOptionDisplay').innerText = 'you have selected: ' + selectedOption;
+        }
+    </script>
+    
+     </form>
+
+    <script>
+        document.getElementById("surveyForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("This is a static form. In a real application, you'd submit the data to a server.");
+            // You'd typically use JavaScript to send form data to a server using AJAX.
+        });
+    </script>
+     <button type="submit" onclick="redirectBasedOnOptions()">Submit</button>
+     <script>
+        function redirectBasedOnOptions() {
+            var selectedOption1 = document.getElementById('option1').value;
+            var selectedOption2 = document.getElementById('option2').value;
+
+            // Redirect based on the combination of selected options
+            switch (selectedOption1 + '_' + selectedOption2) {
+                case 'microsoft_waf':
+                    window.location.href = 'microsoft_waf.html';
+                    break;
+                case 'microsoft_mcqs':
+                    window.location.href = 'microsoft_mcqs.html';
+                    break;
+                case 'microsoft_emoji':
+                    window.location.href = 'microsoft_emoji.html';
+                    break;
+                case 'google_waf':
+                    window.location.href = 'google_waf.html';
+                    break;
+                case 'google_emoji':
+                    window.location.href = 'google_emoji.html';
+                    break;
+                case 'google_mcqs':
+                    window.location.href = 'google_mcqs.html';
+                    break;
+                default:
+                    // Handle unknown combinations or add more cases
+                    break;
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form for microsoft</title>
+</head>
+<body>
+    <h1>Feedback Form for microsoft</h1>
+    <form action="/submit-feedback" method="POST">
+        <label for="feedback">Your Feedback:</label>
+        <textarea id="feedback" name="feedback" rows="4" cols="50"></textarea><br><br>
+        <button type="button" onclick="submitForm()">Submit Form</button>
+    </form>
+
+    <script>
+        function submitForm() {
+            // Perform form submission logic here (validation, data processing, etc.)
+
+            // After successful submission, redirect to another page
+            window.location.href = 'thanks.html';
+        }
+    </script>
+
+</body>
+</html>

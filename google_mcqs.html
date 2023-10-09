@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Feedback</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        fieldset {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        legend {
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+        button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Employee Feedback for google</h1>
+
+
+    <form>
+        <fieldset>
+            <legend>Question 1: How satisfied are you with the overall work environment?</legend>
+            <label><input type="radio" name="q1" value="very_satisfied"> Very Satisfied</label>
+            <label><input type="radio" name="q1" value="satisfied"> Satisfied</label>
+            <label><input type="radio" name="q1" value="neutral"> Neutral</label>
+            <label><input type="radio" name="q1" value="unsatisfied"> Unsatisfied</label>
+            <label><input type="radio" name="q1" value="very_unsatisfied"> Very Unsatisfied</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Question 2: How would you rate the communication within the team?</legend>
+            <label><input type="radio" name="q2" value="excellent"> Excellent</label>
+            <label><input type="radio" name="q2" value="good"> Good</label>
+            <label><input type="radio" name="q2" value="average"> Average</label>
+            <label><input type="radio" name="q2" value="poor"> Poor</label>
+            <label><input type="radio" name="q2" value="very_poor"> Very Poor</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Question 3: How is the work pressure?</legend>
+            <label><input type="radio" name="q3" value="very_less"> very less</label>
+            <label><input type="radio" name="q3" value="less"> less</label>
+            <label><input type="radio" name="q3" value="medium"> Average</label>
+            <label><input type="radio" name="q3" value="high"> high</label>
+            <label><input type="radio" name="q3" value="very_high"> Very high</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Question 4: How well do you think your skills are utilized in your role?</legend>
+            <label><input type="radio" name="q4" value="very_well"> Very Well</label>
+            <label><input type="radio" name="q4" value="well"> Well</label>
+            <label><input type="radio" name="q4" value="neutral"> Neutral</label>
+            <label><input type="radio" name="q4" value="poor"> Poor</label>
+            <label><input type="radio" name="q4" value="very_poor"> Very Poor</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Question 5: How satisfied are you with the feedback and recognition you receive?</legend>
+            <label><input type="radio" name="q5" value="very_satisfied"> Very Satisfied</label>
+            <label><input type="radio" name="q5" value="satisfied"> Satisfied</label>
+            <label><input type="radio" name="q5" value="neutral"> Neutral</label>
+            <label><input type="radio" name="q5" value="unsatisfied"> Unsatisfied</label>
+            <label><input type="radio" name="q5" value="very_unsatisfied"> Very Unsatisfied</label>
+        </fieldset>
+
+        <button type="button" onclick="submitForm()">Submit Form</button>
+    </form>
+
+    <script>
+        function submitForm() {
+            // Perform form submission logic here (validation, data processing, etc.)
+
+            // After successful submission, redirect to another page
+            window.location.href = 'thanks.html';
+        }
+    </script>
+
+</body>
+</html>
+
